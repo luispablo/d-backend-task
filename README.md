@@ -124,3 +124,9 @@ When you have finished the assignment, create a github repository and send us th
   
 
 Thank you and good luck! 🙏
+
+---
+
+## Some notes
+
+- Using NodeJS 18.12.1 (set in ```.nvmrc```)
