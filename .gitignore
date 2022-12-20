@@ -1,4 +1,4 @@
 node_modules
 .DS_STORE
 database.sqlite3
-test/database.sqlite3
+test/database.sqlite
