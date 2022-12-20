@@ -136,6 +136,7 @@ Thank you and good luck! 🙏
 - [x] Add unit tests
 - [x] UT database?
 - [x] Add env params to app
+- [ ] Add load / volume tests (specially to test the queries with more data)
 - [ ] Create separate routers
 - [ ] Normalize single / double quotes
 - [ ] Add or remove semicolons
