@@ -143,4 +143,6 @@ Thank you and good luck! 🙏
 - [ ] Add express validator (specially to POST routes!)
 - [ ] Add express validator / sanitizer to admin dates query params
 - [ ] Use 2 spaces in all files
-- [ ] Add logging
+- [ ] Add logging (using [bunyan](https://github.com/trentm/node-bunyan))
+
+Some missing FIXME and TODO items in the code too.
