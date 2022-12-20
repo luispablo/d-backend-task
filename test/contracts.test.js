@@ -16,6 +16,7 @@ describe("API /contracts", function () {
     const res = await request(app).get("/contracts/1");
     expect(res.status).to.equal(401);
   });
+
   it("should return existing contract", async function () {
     const res = await request(app)
                         .get("/contracts/1")
@@ -30,7 +31,6 @@ describe("API /contracts", function () {
     });
   });
 
-  //   1. ***GET*** `/contracts/:id` - This API is broken 😵! it should return the contract only if it belongs to the profile calling. better fix that!
   it("should return the contract only if it belongs to the profile calling", async function () {
     const contract3 = {
       id:3,
@@ -57,7 +57,6 @@ describe("API /contracts", function () {
     expect(otherRes.status).to.equal(404);
   });
 
-  // 1. ***GET*** `/contracts` - Returns a list of contracts belonging to a user (client or contractor), the list should only contain non terminated contracts.
   it("should only contain non terminated contracts", async function () {
     const { body: client1Contracts } = await request(app)
                                               .get("/contracts")

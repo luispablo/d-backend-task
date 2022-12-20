@@ -12,7 +12,6 @@ describe("API /balances", function () {
     app = context.app;
   });
 
-  // 1. ***POST*** `/balances/deposit/:userId` - Deposits money into the the the balance of a client, a client can't deposit more than 25% his total of jobs to pay. (at the deposit moment)
   it("should deposit money ok", async function () {
     await request(app)
             .post("/balances/deposit/3")
@@ -21,6 +20,7 @@ describe("API /balances", function () {
     const { body: client3Profile } = await request(app).get("/profiles").set("profile_id", "3");
     expect(client3Profile).to.deep.include({ balance: 461.3 });
   });
+  
   it("shouldn't be allowed to deposit more than 25% of his total jobs to pay", async function () {
     // Client 2: $ 402 unpaid, cannot deposit more than 100.5
     const deposit1Res = await request(app)

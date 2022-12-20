@@ -13,7 +13,6 @@ describe("API /jobs", function () {
   });
 
 
-  // 1. ***GET*** `/jobs/unpaid` -  Get all unpaid jobs for a user (***either*** a client or contractor), for ***active contracts only***.
   it("should get all unpaid jobs for a user (client or contractor) for active contracts only", async function () {
     // contractor unpaid jobs (not terminated!)
     const { body: contractor7UnpaidJobs } = await request(app)
@@ -36,7 +35,6 @@ describe("API /jobs", function () {
     expect(client1UnpaidJobs.map(j => j.ContractId)).to.deep.equal([2]);
   });
 
-  // 1. ***POST*** `/jobs/:job_id/pay` - Pay for a job, a client can only pay if his balance >= the amount to pay. The amount should be moved from the client's balance to the contractor balance.
   it("should pay for a job", async function () {
     const { body: client1ProfileBefore } = await request(app).get("/profiles").set("profile_id", "1");
     expect(client1ProfileBefore.balance).to.equal(1150, "Client 1 balance before paying");
