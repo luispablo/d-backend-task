@@ -130,3 +130,17 @@ Thank you and good luck! 🙏
 ## Some notes
 
 - Using NodeJS 18.12.1 (set in ```.nvmrc```)
+
+## TODOs
+
+- [x] Add unit tests
+- [x] UT database?
+- [x] Add env params to app
+- [ ] Create separate routers
+- [ ] Normalize single / double quotes
+- [ ] Add or remove semicolons
+- [ ] Create a service layer and move queries to it
+- [ ] Add express validator (specially to POST routes!)
+- [ ] Add express validator / sanitizer to admin dates query params
+- [ ] Use 2 spaces in all files
+- [ ] Add logging

@@ -1,9 +1,10 @@
-const { Profile, Contract, Job } = require('../src/model');
+
 
 /* WARNING THIS WILL DROP THE CURRENT DATABASE */
-seed();
+const seed = async function seed (dbName) {
 
-async function seed() {
+  const { Profile, Contract, Job } = require('../src/model')(dbName);
+
   // create tables
   await Profile.sync({ force: true });
   await Contract.sync({ force: true });
@@ -227,4 +228,6 @@ async function seed() {
     }),
     
   ]);
-}
+};
+
+module.exports = seed;
